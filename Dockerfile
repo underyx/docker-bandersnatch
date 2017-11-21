@@ -1,5 +1,5 @@
 # Version 1.5
-FROM            python:2.7
+FROM            python:3.6
 MAINTAINER      Allan Lei "allanlei@helveticode.com
 
 # Environment setup
@@ -12,7 +12,7 @@ ENV             PYTHONIOENCODING utf-8
 
 # Setup
 WORKDIR         /usr/src/app
-RUN             pip install --use-wheel bandersnatch==1.5
+RUN             pip install --use-wheel bandersnatch==2.0
 RUN 			bandersnatch mirror || true
 
 CMD				["bandersnatch", "mirror"]
